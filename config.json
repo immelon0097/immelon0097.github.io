@@ -1,6 +1,16 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+    "title": "Immelon",
+    "subTitle": "Learn something and build something.",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/141016632?v=4",
+    "GMEEK_VERSION": "last",
+    "startSite": "07/03/2024",
+    "i18n": "EN",
+    "UTC": 8,
+    "themeMode": "manual",
+    "dayTheme": "light",
+    "nightTheme": "dark_colorblind",
+    "urlMode": "issue",
+    "bottomText": "Thanks for reading, comments are welcome. ❤",
+    "primerCSS": "<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
+    "needComment": 1,
 }
