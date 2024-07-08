@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/141016632?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="## This Week I Discovered
+> _Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way.">
+<meta property="og:title" content="2024W27 Summary - Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way. ">
+<meta property="og:description" content="## This Week I Discovered
+> _Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://immelon0097.github.io/post/2.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/141016632?v=4">
+<title>2024W27 Summary - Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way. </title>
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">2024W27 Summary - Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way. </h1>
+<div class="title-right">
+    <a href="https://immelon0097.github.io" id="buttonHome" class="btn btn-invisible circle" title="home">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/immelon0097/immelon0097.github.io/issues/2" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="switch theme">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>This Week I Discovered</h2>
+<blockquote>
+<p><em>Happy Git repositories are all alike; every unhappy Git repository is unhappy in its own way.</em> —Linus Tolstoy</p>
+</blockquote>
+<h3>Tools</h3>
+<p>Opensouce tools:</p>
+<ul>
+<li><a href="https://whats.new/" rel="nofollow">Do Something .new</a>, whats.new provides shortcuts for some services, I love <a href="http://gist.new" rel="nofollow">gist.new</a>, <a href="http://resume.new" rel="nofollow">resume.new</a> and <a href="http://docs.new" rel="nofollow">docs.new</a>.</li>
+<li><a href="https://github.com/RubyMetric/chsrc">chsrc</a>, as said in the brief. I tried to change my cargo registry, but it can't recognise my configured sources because I created <code class="notranslate">.cargo/config</code> to keep them.</li>
+<li><a href="https://github.com/github/git-sizer">git-sizer</a>, an easy-to-use sizer tool, and mentioned some useful tips for building <strong>happy Git repositories.</strong></li>
+<li><a href="https://kate.io/blog/git-bomb/" rel="nofollow">git-bomb</a>, git-sizer mentioned this "git bomb".</li>
+</ul>
+<p>Commercial tools:</p>
+<ul>
+<li><a href="https://www.18bit.cn/index.html" rel="nofollow">18bit DNS</a>, 18bit DNS is a <a href="https://github.com/AdguardTeam/AdGuardHome">AdGuardHome</a> service hosted in China, it may works well, but the user can't feel how important they are.</li>
+<li><a href="https://www.tradingview.com/" rel="nofollow">TradingView</a>, data the market, interactive datasheet makes it easier to communicate.</li>
+<li><a href="https://tableplus.com/" rel="nofollow">TablePlus</a>, an elegent db client for Mac.</li>
+</ul>
+<h3>Projects</h3>
+<ul>
+<li><a href="https://www.neobrutalism.dev/" rel="nofollow">Neobrutalism components</a>, a collection of neobrutalism-styled Tailwind components.</li>
+</ul>
+<h2>This Week I Learned</h2>
+<h3>GitHub Actions workflow in Gmeek project</h3>
+<p>Gmeek workflow file is <a href="https://github.com/Meekdai/meekdai.github.io/blob/afa8456928cba3d75ec9406a44a505180f0aa65d/.github/workflows/Gmeek.yml">here</a></p>
+<h4>Part 1, Events that trigger workflows used by Gmeek</h4>
+<ol>
+<li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch"><code class="notranslate">workflow_dispatch</code></a>: manual operation would trigger the flow.</li>
+<li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues"><code class="notranslate">issues</code></a>: issue events would trigger the flow.</li>
+<li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule"><code class="notranslate">schedule</code></a>: trigger the workflow at a scheduled time.</li>
+</ol>
+<details>
+<summary>Some of the events would also be recorded in the GitHub Webhook payload. After triggering the flow, some of the flow [variables](https://docs.github.com/en/actions/learn-github-actions/variables) would be changed. </summary>
+<table role="table">
+<thead>
+<tr>
+<th>Webhook event payload</th>
+<th>Activity types</th>
+<th><code class="notranslate">GITHUB_SHA</code> after triggering</th>
+<th><code class="notranslate">GITHUB_REF</code> after triggering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch">workflow_dispatch</a></td>
+<td>Not applicable</td>
+<td>Last commit on the <code class="notranslate">GITHUB_REF</code> branch or tag</td>
+<td>Branch or tag that received dispatch</td>
+</tr>
+<tr>
+<td>Not applicable</td>
+<td>Not applicable</td>
+<td>Last commit on default branch</td>
+<td>Default branch</td>
+</tr>
+<tr>
+<td><a href="https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#issues"><code class="notranslate">issues</code></a></td>
+<td>- <code class="notranslate">opened</code>  <br>- <code class="notranslate">edited</code>  <br>- <code class="notranslate">deleted</code>  <br>- <code class="notranslate">transferred</code><br>- <code class="notranslate">pinned</code>  <br>- <code class="notranslate">unpinned</code>  <br>- <code class="notranslate">closed</code>  <br>- <code class="notranslate">reopened</code>  <br>- <code class="notranslate">assigned</code>  <br>- <code class="notranslate">unassigned</code> <br>- <code class="notranslate">labeled</code>  <br>- <code class="notranslate">unlabeled</code>  <br>- <code class="notranslate">locked</code>  <br>- <code class="notranslate">unlocked</code>  <br>- <code class="notranslate">milestoned</code>  <br>- <code class="notranslate">demilestoned</code></td>
+<td>Last commit on default branch</td>
+<td>Default branch</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4>Part 2, Actions from <a href="https://github.com/marketplace">GitHub Marketplace</a></h4>
+<ol>
+<li><a href="https://github.com/marketplace/actions/checkout"><code class="notranslate">checkout@v4</code></a>, this action <strong>on default</strong> fetch the <strong>single</strong> commit on <code class="notranslate">$GITHUB_REF/$GITHUB_SHA</code> .</li>
+<li><a href=""><code class="notranslate">configure-pages@v4</code></a>, this action <strong>on default</strong> enables Pages and extracts various metadata about the site.</li>
+<li><a href="https://github.com/marketplace/actions/setup-python"><code class="notranslate">setup-python@v5</code></a>, this action setups Python environment including specific Python version, pack manager, and finally sets the path.</li>
+<li><a href="https://github.com/marketplace/actions/upload-github-pages-artifact"><code class="notranslate">upload-pages-artifact@v3</code></a>, this action composite the static assets to be deployed on GitHub Pages using <code class="notranslate">tar</code> command.</li>
+<li><a href="https://github.com/marketplace/actions/deploy-github-pages-site"><code class="notranslate">deploy-pages@v4</code></a>, this action deploys the artifact uploaded in the action above.</li>
+</ol>
+<p>All the workflows that build the repository and publish it to GitHub Pages commonly use the actions above, and GitHub provides a <a href="https://github.com/actions/starter-workflows/tree/main/pages">starter-workflow</a>.</p>
+<h4>Part 3, Other jobs</h4>
+<ol>
+<li>Cloning the generator script and templates
+<ul>
+<li>the author uses <code class="notranslate">jq</code> command to parse <code class="notranslate">GMEEK_VERSION</code> and decide which version to clone.</li>
+</ul>
+</li>
+<li>Parsing configurations
+<ul>
+<li>the author uses <a href="https://docs.python.org/3/library/json.html" rel="nofollow"><code class="notranslate">json</code></a> package in the Python script to use other configurations, then generate HTMLs.</li>
+</ul>
+</li>
+<li>Generate the blogs
+<ul>
+<li>the author created a <code class="notranslate">GMEEK</code> class, it contains all the members and methods for creating the static assets
+<ul>
+<li>important members: <code class="notranslate">options</code>, <code class="notranslate">user</code></li>
+<li>important methods:
+<ul>
+<li><code class="notranslate">defaultConfig()</code>, this function reads configs from <code class="notranslate">config.json</code>.</li>
+<li><code class="notranslate">markdown2html(mdstr)</code>, calls github's markdown api to get html.</li>
+<li><code class="notranslate">renderHtml(template, blogBase, postListJson, htmlDir, icon)</code>, loads templates and render the final html file.</li>
+<li><code class="notranslate">createPostHtml(issue)</code>, opens <code class="notranslate">.md</code> file, gets <code class="notranslate">.html</code> output by calling <code class="notranslate">markdown2html()</code>, checks MathJax and alerts, configs the post info, render the final <code class="notranslate">.html</code> by calling <code class="notranslate">renderHtml()</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Commit and push to the repository.</li>
+</ol>
+<h3>JSON format and <code class="notranslate">jq</code> command</h3>
+<p>I've been wrong about understanding JSON format for a long time, almost every programming language supports JSON.</p>
+<p><a href="https://www.json.org/json-en.html" rel="nofollow">JSON</a> is a data-interchange format, a JSON object is an unordered set of name/value pairs seperated by comma.</p>
+<p><a href="https://jqlang.github.io/" rel="nofollow"><code class="notranslate">jq</code></a> usage: <a href="https://jqlang.github.io/jq/tutorial/" rel="nofollow">jq tutorial</a>, the tutorial takes jq's GitHub repository as example to show how the command should be use.</p>
+<h2>This Week I Built</h2>
+<h3>A Blog</h3>
+<p><a href="https://immelon.top/" rel="nofollow">Blog site: immelon.top</a>, thanks to <a href="https://github.com/Meekdai/Gmeek-template">Gmeek</a>.</p>
+<p>Gmeek uses GitHub Actions to render issues into HTMLs, then GitHub Pages render the repository on the &lt;username&gt;.github.io, comments on the issues would be rendered into comment widget of the blog by <a href="https://github.com/utterance/utterances">utterance</a></p>
+<p>There are several other projects follows the road above(or similarily), they are different to some extent:</p>
+<ol>
+<li><a href="https://gitblog.io/" rel="nofollow">Gitblog | Lightweight Blogging Solution</a>, many more themes, provides analytics, needs to be paid for more than one blog under one account and API access(to analytics?).</li>
+<li><a href="https://github.com/yihong0618/gitblog"> yihong0618/gitblog: People Die, but Long Live GitHub</a>, opensource, but many complex configurations.</li>
+<li><a href="https://github.com/imuncle/gitblog">GitHub - imuncle/gitblog</a>, integrates configuration into one file, provides API access to the blog.</li>
+</ol>
+<p>Which aspect of Gmeek attracts me most?</p>
+<ol>
+<li>Easy and fast, two-step configuration based on <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository">GitHub template repository</a>, I can even configure nothing to start writing!</li>
+<li><a href="https://primer.style/" rel="nofollow">Primer</a> style UI, github's stable and pretty design system.</li>
+</ol></div>
+<div style="font-size:small;margin-top:8px;float:right;">Thanks for reading, comments are welcome. ❤</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://immelon0097.github.io"> Immelon </a>
+<p>
+<span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
+</p>
+
+<script>
+if("07/03/2024"!=""){
+    var now=new Date();
+    var startSite=new Date("07/03/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("year").innerHTML=now.getFullYear();
+    if(""!=""){document.getElementById("runday").innerHTML=" • "+"run "+diffDay+" days"+" • ";}
+    else{document.getElementById("runday").innerHTML="run "+diffDay+" days"+" • ";}
+}
+</script>
+</div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","immelon0097/immelon0097.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+</html>
