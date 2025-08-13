@@ -12,5 +12,6 @@
     "urlMode": "issue",
     "bottomText": "Thanks for reading, comments are welcome. ❤",
     "primerCSS": "<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
-    "needComment": 1
+    "needComment": 1,
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
